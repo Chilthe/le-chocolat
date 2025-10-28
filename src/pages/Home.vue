@@ -1,7 +1,9 @@
 <template>
-  <Header />
-  <Body />
-  <Footer />
+  <div class="flex flex-col h-screen">
+    <Header />
+    <Body />
+    <Footer />
+  </div>
 </template>
 
 <script setup>

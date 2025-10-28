@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #b08630;
+  --color-primary: #B08630;
   --color-secondary: #FAF7E3;
 }
 
@@ -21,7 +21,6 @@
 
 header {
   background-color: var(--color-primary);
-  height: 8vh;
 }
 
 footer {
