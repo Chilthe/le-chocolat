@@ -1,0 +1,23 @@
+[
+  {
+    "id": "00001",
+    "title": "Tablette Chocolat Noir 70%",
+    "description": "Un chocolat noir intense et équilibré, issu de fèves de cacao sélectionnées avec soin.",
+    "price": 4.5,
+    "img": "lnc.png"
+  },
+  {
+    "id": "00002",
+    "title": "Tablette Chocolat Lait Caramel",
+    "description": "Un mariage onctueux entre le chocolat au lait et un cœur fondant de caramel doré.",
+    "price": 5.0,
+    "img": "lclkd.png"
+  },
+  {
+    "id": "00003",
+    "title": "Tablette Chocolat Blanc Vanille",
+    "description": "Une douceur délicate au chocolat blanc parfumé à la vanille naturelle de Madagascar.",
+    "price": 4.8,
+    "img": "chipichapa.png"
+  }
+]
