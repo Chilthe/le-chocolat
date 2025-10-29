@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="h-50">
     <div class="grid grid-cols-3">
       <div class="col-span-1">
         <p>CONTACT</p>
