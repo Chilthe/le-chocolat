@@ -3,11 +3,20 @@
     class="w-full h-screen bg-cover bg-center flex items-end justify-start p-25"
     style="background-image: url('src/assets/chipichapa.png')"
   >
-    <strong class="text-6xl"> Calendrier de l'avant ! </strong>
-    <span class="text-2xl"> Réservez maintenant ici </span>
+    <strong class="text-white text-6xl prevent-select">{{ offerTitle }}</strong>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
 
-<style scoped></style>
+const offerTitle = ref("Calendrier de l'avant !");
+</script>
+
+<style scoped>
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
