@@ -1,7 +1,7 @@
 <template>
-  <footer class="h-50">
-    <div class="grid grid-cols-3">
-      <div class="col-span-1">
+  <footer class="h-50 flex justify-center items-center">
+    <div class="w-full h-full flex justify-center items-center">
+      <div>
         <p>CONTACT</p>
         <p>Thomas Delannoy</p>
         <p>Chef Chocolatier - confiseur</p>
@@ -9,8 +9,6 @@
         <p>tdel@augusteetferdinand.com</p>
         <p>augusteetferdinand.com</p>
       </div>
-      <div class="col-span-1">2222222</div>
-      <div class="col-span-1">3333333</div>
     </div>
   </footer>
 </template>
