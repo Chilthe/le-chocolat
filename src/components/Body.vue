@@ -2,8 +2,7 @@
   <main class="flex-1">
     <Offer v-if="OFFER" />
     <Display />
-    <div class="border-b" />
-    <Display />
+    <Display class="bg-tertiary" />
   </main>
 </template>
 
