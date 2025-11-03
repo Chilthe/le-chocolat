@@ -12,4 +12,12 @@ export default defineConfig({
       "~": path.resolve(__dirname, "./src/components"),
     },
   },
+  server: {
+    hmr: {
+      host: 'localhost',
+    },
+    watch: {
+      usePolling: true,
+    },
+  },
 });
