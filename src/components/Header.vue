@@ -11,7 +11,7 @@
       </div>
 
       <div class="col-span-1 flex justify-center">
-        <strong class="text-3xl">LE CHOCOLAT</strong>
+        <strong class="text-4xl">LE CHOCOLAT</strong>
       </div>
 
       <div class="col-span-1 pr-25 flex justify-end">
