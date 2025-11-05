@@ -10,6 +10,8 @@
         <li>augusteetferdinand.com</li>
       </menu>
 
+      <div class="w-1/10" />
+
       <!-- Add router -->
       <menu>
         <li>NOS PRODUITS</li>
@@ -18,9 +20,9 @@
         <li>Éditions limitées</li>
       </menu>
     </div>
-    <div class="h-25 w-full flex justify-center items-center">
+    <div class="h-25 w-full flex justify-center items-start">
       <!-- same as header -->
-      <strong class="text-4xl">LE CHOCOLAT</strong>
+      <strong class="text-4xl pt-1">LE CHOCOLAT</strong>
     </div>
   </footer>
 </template>

@@ -1,12 +1,19 @@
 <template>
-  <div class="w-125 h-175 bg-primary overflow-hidden">
-    <div class="h-19/20 flex justify-center items-center">
-      <img :src="getImageUrl(img_link)" :alt="img_link" class="w-full h-full object-cover object-center" />
+  <div class="w-[40vh] h-7/8 overflow-hidden">
+    <div class="h-18/20 flex justify-center items-center">
+      <img
+        :src="getImageUrl(img_link)"
+        :alt="img_link"
+        class="w-full h-full object-cover object-center"
+      />
     </div>
 
-    <div class="flex justify-between px-3">
-      <span class="text-2xl items-start">{{ img_title }}</span>
-      <span class="text-xl flex items-end">{{ img_price }} €</span>
+    <div class="h-1/20 flex justify-between px-1">
+      <span class="text-[1.1vw]">{{ img_title }}</span>
+      <span class="text-[1vw]">{{ product_gram }}</span>
+    </div>
+    <div class="h-1/20 flex justify-between px-3">
+      <span class="text-[1vw]">{{ img_price }} €</span>
     </div>
   </div>
 </template>
@@ -16,10 +23,11 @@ defineProps({
   img_link: String,
   img_alt: String,
   img_title: String,
-  img_price: String
-})
+  img_price: String,
+  product_gram: String,
+});
 
-const getImageUrl = (filename) => {
-  return new URL(`../assets/${filename}`, import.meta.url).href;
+const getImageUrl = (path) => {
+  return new URL(`../assets/${path}`, import.meta.url).href;
 };
 </script>
