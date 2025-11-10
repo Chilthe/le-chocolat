@@ -2,7 +2,7 @@
   <div class="w-[40vh] h-7/8 overflow-hidden">
     <div class="h-18/20 flex justify-center items-center">
       <img
-        :src="getImageUrl(img_link)"
+        :src="getImage(img_link)"
         :alt="img_link"
         class="w-full h-full object-cover object-center"
       />
@@ -20,14 +20,17 @@
 
 <script setup>
 defineProps({
-  img_link: String,
+  img_link: Object,
   img_alt: String,
   img_title: String,
   img_price: String,
   product_gram: String,
 });
 
-const getImageUrl = (path) => {
-  return new URL(`../assets/${path}`, import.meta.url).href;
-};
+function getImage(product) {
+  const path = product.folder
+    ? `${product.folder}${product.file}`
+    : product.file;
+  return new URL('../assets/'+path, import.meta.url).href;
+}
 </script>

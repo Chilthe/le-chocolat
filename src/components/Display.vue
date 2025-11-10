@@ -9,19 +9,19 @@
       class="h-7/8 flex justify-center items-center gap-10"
     >
       <Card
-        img_link="confiserie_1.png"
+        :img_link="product1"
         img_title="Confiserie"
         img_price="5.55"
         product_gram="500g"
       />
       <Card
-        img_link="chocolat_1.png"
+        :img_link="product2"
         img_title="Tablette de Chocolat"
         img_price="11.75"
         product_gram="500g"
       />
       <Card
-        img_link="ourson_1.png"
+        :img_link="product3"
         img_title="Ourson en chocolat blanc"
         img_price="7.20"
         product_gram="500g"
@@ -33,25 +33,25 @@
       class="h-7/8 flex justify-center items-center gap-10"
     >
       <Card
-        img_link="chocolat/cahuet.png"
+        :img_link="chocolat1"
         img_title="Ourson en chocolat blanc"
         img_price="7.20"
         product_gram="500g"
       />
       <Card
-        img_link="chocolat/classic.png"
+        :img_link="chocolat2"
         img_title="Ourson en chocolat blanc"
         img_price="7.20"
         product_gram="500g"
       />
       <Card
-        img_link="chocolat/dark.png"
+        :img_link="chocolat3"
         img_title="Ourson en chocolat blanc"
         img_price="7.20"
         product_gram="500g"
       />
       <Card
-        img_link="chocolat/stars.png"
+        :img_link="chocolat4"
         img_title="Ourson en chocolat blanc"
         img_price="7.20"
         product_gram="500g"
@@ -79,4 +79,31 @@ const title = computed(() => {
       return "Recherche d'un titre adapté";
   }
 });
+
+const product1 = {
+  file: "confiserie_1.png",
+};
+const product2 = {
+  file: "chocolat_1.png",
+};
+const product3 = {
+  file: "ourson_1.png",
+};
+
+const chocolat1 = {
+  folder: "chocolat/",
+  file: "cahuet.png",
+};
+const chocolat2 = {
+  folder: "chocolat/",
+  file: "classic.png",
+};
+const chocolat3 = {
+  folder: "chocolat/",
+  file: "dark.png",
+};
+const chocolat4 = {
+  folder: "chocolat/",
+  file: "stars.png",
+};
 </script>
