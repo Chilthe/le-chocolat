@@ -9,22 +9,9 @@
       class="h-7/8 flex justify-center items-center gap-10"
     >
       <Card
-        :img_link="product1"
-        img_title="Confiserie"
-        img_price="5.55"
-        product_gram="500g"
-      />
-      <Card
-        :img_link="product2"
-        img_title="Tablette de Chocolat"
-        img_price="11.75"
-        product_gram="500g"
-      />
-      <Card
-        :img_link="product3"
-        img_title="Ourson en chocolat blanc"
-        img_price="7.20"
-        product_gram="500g"
+        v-for="product in classics"
+        :key="product.index"
+        :product="product"
       />
     </div>
 
@@ -32,30 +19,7 @@
       v-else-if="type === 'products'"
       class="h-7/8 flex justify-center items-center gap-10"
     >
-      <Card
-        :img_link="chocolat1"
-        img_title="Ourson en chocolat blanc"
-        img_price="7.20"
-        product_gram="500g"
-      />
-      <Card
-        :img_link="chocolat2"
-        img_title="Ourson en chocolat blanc"
-        img_price="7.20"
-        product_gram="500g"
-      />
-      <Card
-        :img_link="chocolat3"
-        img_title="Ourson en chocolat blanc"
-        img_price="7.20"
-        product_gram="500g"
-      />
-      <Card
-        :img_link="chocolat4"
-        img_title="Ourson en chocolat blanc"
-        img_price="7.20"
-        product_gram="500g"
-      />
+      <Card v-for="tab in tablettes" :key="tab.index" :product="tab" />
     </div>
   </div>
 </template>
@@ -80,30 +44,6 @@ const title = computed(() => {
   }
 });
 
-const product1 = {
-  file: "confiserie_1.png",
-};
-const product2 = {
-  file: "chocolat_1.png",
-};
-const product3 = {
-  file: "ourson_1.png",
-};
-
-const chocolat1 = {
-  folder: "chocolat/",
-  file: "cahuet.png",
-};
-const chocolat2 = {
-  folder: "chocolat/",
-  file: "classic.png",
-};
-const chocolat3 = {
-  folder: "chocolat/",
-  file: "dark.png",
-};
-const chocolat4 = {
-  folder: "chocolat/",
-  file: "stars.png",
-};
+const tablettes = PRODUCTS.filter(image.folder !== null);
+const classics = PRODUCTS.filter(image.folder === null);
 </script>

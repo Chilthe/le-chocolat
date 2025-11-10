@@ -1,23 +1,91 @@
 [
   {
-    "id": "00001",
-    "title": "Tablette Chocolat Noir 70%",
-    "description": "Un chocolat noir intense et équilibré, issu de fèves de cacao sélectionnées avec soin.",
-    "price": 4.5,
-    "img": "lnc.png"
+    "id": "001",
+    "title": "Calendrier de l'avent",
+    "description": "xxx",
+    "grames": "xxx",
+    "price": null,
+    "offer": true,
+    "image": {
+      "folder": null,
+      "file": "calendrier.png"
+    }
   },
   {
-    "id": "00002",
-    "title": "Tablette Chocolat Lait Caramel",
-    "description": "Un mariage onctueux entre le chocolat au lait et un cœur fondant de caramel doré.",
-    "price": 5.0,
-    "img": "lclkd.png"
+    "id": "002",
+    "title": "Confiserie",
+    "description": "xxx",
+    "grames": "20g",
+    "price": 5.55,
+    "image": {
+      "folder": null,
+      "file": "confiserie.png"
+    }
   },
   {
-    "id": "00003",
-    "title": "Tablette Chocolat Blanc Vanille",
-    "description": "Une douceur délicate au chocolat blanc parfumé à la vanille naturelle de Madagascar.",
-    "price": 4.8,
-    "img": "chipichapa.png"
+    "id": "003",
+    "title": "Ourson en chocolat blanc",
+    "description": "xxx",
+    "grames": "50g",
+    "price": 7.20,
+    "image": {
+      "folder": null,
+      "file": "ourson.png"
+    }
+  },
+  {
+    "id": "004",
+    "title": "Tablette de Chocolat",
+    "description": "xxx",
+    "grames": "120g",
+    "price": 11.75,
+    "image": {
+      "folder": null,
+      "file": "tablette.png"
+    }
+  },
+  {
+    "id": "005",
+    "title": "Tablette cacahuètes",
+    "description": "xxx",
+    "grames": "150g",
+    "price": 8.25,
+    "image": {
+      "folder": "chocolat/",
+      "file": "cahuet.png"
+    }
+  },
+  {
+    "id": "006",
+    "title": "Tablette chocolat au lait",
+    "description": "xxx",
+    "grames": "120g",
+    "price": 6.66,
+    "image": {
+      "folder": "chocolat/",
+      "file": "classic.png"
+    }
+  },
+  {
+    "id": "007",
+    "title": "Tablette chocolat noir",
+    "description": "xxx",
+    "grames": "80g",
+    "price": 5.70,
+    "image": {
+      "folder": "chocolat/",
+      "file": "dark.png"
+    }
+  },
+  {
+    "id": "008",
+    "title": "Tablette stylisée",
+    "description": "xxx",
+    "grames": "130",
+    "price": 9.25,
+    "image": {
+      "folder": "chocolat/",
+      "file": "stars.png"
+    }
   }
 ]
