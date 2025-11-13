@@ -4,25 +4,23 @@
     ${isVisible ? 'translate-y-0' : '-translate-y-full'}`"
   >
     <div class="h-full grid grid-cols-3 items-center">
-      <div class="col-span-1 pl-25 flex justify-start">
+      <div class="flex justify-start sm:justify-center">
         <button @click="test('menu')">
-          <Bars3Icon class="size-10" />
+          <Bars3Icon class="size-8 sm:size-10 mx-3" />
         </button>
-      </div>
-
-      <div class="col-span-1 flex justify-center">
-        <strong class="text-4xl">LE CHOCOLAT</strong>
-      </div>
-
-      <div class="col-span-1 pr-25 flex justify-end">
         <button @click="test('search')">
-          <MagnifyingGlassIcon class="size-8" />
+          <MagnifyingGlassIcon class="size-7 sm:size-8" />
         </button>
+      </div>
+
+      <strong class="flex justify-center text-xl sm:text-3xl"> LE CHOCOLAT </strong>
+
+      <div class="flex justify-end sm:justify-center">
         <button @click="test('user')">
-          <UserIcon class="size-8 mx-3" />
+          <UserIcon class="size-7 sm:size-8" />
         </button>
         <button @click="test('shop')">
-          <ShoppingBagIcon class="size-8" />
+          <ShoppingBagIcon class="size-7 sm:size-8 mx-3" />
         </button>
       </div>
     </div>
