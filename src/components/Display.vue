@@ -44,6 +44,6 @@ const title = computed(() => {
   }
 });
 
-const tablettes = PRODUCTS.filter(image.folder !== null);
-const classics = PRODUCTS.filter(image.folder === null);
+const tablettes = PRODUCTS.filter((p) => p.image.folder !== null);
+const classics = PRODUCTS.filter((p) => p.image.folder === null && !p.offer);
 </script>

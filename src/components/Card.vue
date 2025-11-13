@@ -9,11 +9,11 @@
     </div>
 
     <div class="h-1/20 flex justify-between px-1">
-      <span class="text-[1.1vw]">{{ img_title }}</span>
-      <span class="text-[1vw]">{{ product_gram }}</span>
+      <span class="text-[1.1vw]">{{ product.title }}</span>
+      <span class="text-[1vw]">{{ product.grames }}</span>
     </div>
     <div class="h-1/20 flex justify-between px-3">
-      <span class="text-[1vw]">{{ img_price }} €</span>
+      <span class="text-[1vw]">{{ product.price }} €</span>
     </div>
   </div>
 </template>
