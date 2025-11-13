@@ -1,8 +1,8 @@
 <template>
-  <main class="flex-1">
+  <main>
     <Offer v-if="OFFER" />
     <Display type="display" class="bg-tertiary" />
-    <Display type="products" />
+    <!-- <Display type="products" /> -->
   </main>
 </template>
 

@@ -1,6 +1,9 @@
 <template>
-  <div class="h-[80vh]">
-    <div class="h-1/8 flex justify-center items-end">
+  <div class="sm:h-[80vh]">
+    <div class="p-5 sm:gap-10 sm:h-7/8 sm:flex sm:justify-center sm:items-center">
+      <Card v-for="product in classics" :key="product.index" :product="product" />
+    </div>
+    <!-- <div class="h-1/8 flex justify-center items-end">
       <span class="text-2xl">{{ title }}</span>
     </div>
 
@@ -20,7 +23,7 @@
       class="h-7/8 flex justify-center items-center gap-10"
     >
       <Card v-for="tab in tablettes" :key="tab.index" :product="tab" />
-    </div>
+    </div> -->
   </div>
 </template>
 
