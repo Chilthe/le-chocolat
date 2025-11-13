@@ -1,9 +1,12 @@
 <template>
-  <div
-    class="w-full h-screen bg-cover bg-center flex items-end justify-start p-25"
-    style="background-image: url('src/assets/calendrier.png')"
-  >
-    <strong class="text-white text-6xl italic text-shadow-lg/50 prevent-select">
+  <!-- Add carrousel -->
+  <div class="w-full h-screen flex justify-center sm:justify-start items-end">
+    <img
+      :src="getImage(offers[0].image)"
+      class="w-full h-full object-cover object-center"
+    />
+
+    <strong class="absolute text-white text-3xl pb-10 sm:text-6xl sm:pl-15 sm:pb-15">
       {{ offers[0].title }}
     </strong>
   </div>
@@ -13,6 +16,7 @@
 import PRODUCTS from "@/utils/products.json";
 
 import { ref } from "vue";
+import { getImage } from "/src/utils/utils.js";
 
 const offers = PRODUCTS.filter((p) => p.offer);
 </script>

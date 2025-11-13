@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[40vh] h-7/8 overflow-hidden">
+  <div class="sm:w-[40vh] h-7/8 overflow-hidden">
     <div class="h-18/20 flex justify-center items-center">
       <img
         :src="getImage(product.image)"
@@ -19,14 +19,9 @@
 </template>
 
 <script setup>
+import { getImage } from "/src/utils/utils.js";
+
 defineProps({
   product: Object,
 });
-
-function getImage(product) {
-  const path = product.folder
-    ? `${product.folder}${product.file}`
-    : product.file;
-  return new URL("../assets/" + path, import.meta.url).href;
-}
 </script>
