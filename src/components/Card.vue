@@ -1,19 +1,19 @@
 <template>
-  <div class="sm:w-[40vh] h-7/8 overflow-hidden">
-    <div class="h-18/20 flex justify-center items-center">
+  <div class="sm:w-[40vh]">
+    <div class="h-18/20">
       <img
+        class="h-fill"
         :src="getImage(product.image)"
         :alt="product.description"
-        class="w-full h-full object-cover object-center"
       />
     </div>
 
     <div class="h-1/20 flex justify-between px-1">
-      <span class="text-[1.1vw]">{{ product.title }}</span>
-      <span class="text-[1vw]">{{ product.grames }}</span>
+      <span>{{ product.title }}</span>
+      <span>{{ product.grames }}g</span>
     </div>
     <div class="h-1/20 flex justify-between px-3">
-      <span class="text-[1vw]">{{ product.price }} €</span>
+      <span>{{ product.price }} €</span>
     </div>
   </div>
 </template>

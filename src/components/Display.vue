@@ -1,29 +1,19 @@
 <template>
   <div class="sm:h-[80vh]">
-    <div class="p-5 sm:gap-10 sm:h-7/8 sm:flex sm:justify-center sm:items-center">
-      <Card v-for="product in classics" :key="product.index" :product="product" />
-    </div>
-    <!-- <div class="h-1/8 flex justify-center items-end">
-      <span class="text-2xl">{{ title }}</span>
+    <div class="h-1/8 flex justify-center items-center">
+      <!-- <span class="text-3xl">{{ title }}</span> -->
+      <span class="text-3xl pt-3">[insérer titre]</span>
     </div>
 
     <div
-      v-if="type === 'display'"
-      class="h-7/8 flex justify-center items-center gap-10"
+      class="p-5 sm:gap-10 sm:h-7/8 sm:flex sm:justify-center sm:items-center"
     >
       <Card
-        v-for="product in classics"
+        v-for="product in patesatartiner"
         :key="product.index"
         :product="product"
       />
     </div>
-
-    <div
-      v-else-if="type === 'products'"
-      class="h-7/8 flex justify-center items-center gap-10"
-    >
-      <Card v-for="tab in tablettes" :key="tab.index" :product="tab" />
-    </div> -->
   </div>
 </template>
 
@@ -36,17 +26,7 @@ const props = defineProps({
   type: String,
 });
 
-const title = computed(() => {
-  switch (props.type) {
-    case "display":
-      return "Découvrez nos produits";
-    case "products":
-      return "Sélection de nos tablettes de chocolat";
-    default:
-      return "Recherche d'un titre adapté";
-  }
-});
-
-const tablettes = PRODUCTS.filter((p) => p.image.folder !== null);
-const classics = PRODUCTS.filter((p) => p.image.folder === null && !p.offer);
+const patesatartiner = PRODUCTS.filter(
+  (p) => p.image.folder === "pate-a-tartiner/"
+);
 </script>

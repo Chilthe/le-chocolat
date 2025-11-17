@@ -6,7 +6,7 @@
       class="w-full h-full object-cover object-center"
     />
 
-    <strong class="absolute text-white text-3xl pb-10 sm:text-6xl sm:pl-15 sm:pb-15">
+    <strong class="prevent-select absolute text-white text-3xl pb-10 sm:text-6xl sm:pl-15 sm:pb-15">
       {{ offers[0].title }}
     </strong>
   </div>

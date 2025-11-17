@@ -1,50 +1,5 @@
 [
   {
-    "id": "001",
-    "title": "Calendrier de l'avent",
-    "description": "xxx",
-    "grames": "xxx",
-    "price": null,
-    "offer": true,
-    "image": {
-      "folder": null,
-      "file": "calendrier.png"
-    }
-  },
-  {
-    "id": "002",
-    "title": "Confiserie",
-    "description": "xxx",
-    "grames": "20g",
-    "price": 5.55,
-    "image": {
-      "folder": null,
-      "file": "confiserie.png"
-    }
-  },
-  {
-    "id": "003",
-    "title": "Ourson en chocolat blanc",
-    "description": "xxx",
-    "grames": "50g",
-    "price": 7.20,
-    "image": {
-      "folder": null,
-      "file": "ourson.png"
-    }
-  },
-  {
-    "id": "004",
-    "title": "Tablette de Chocolat",
-    "description": "xxx",
-    "grames": "120g",
-    "price": 11.75,
-    "image": {
-      "folder": null,
-      "file": "tablette.png"
-    }
-  },
-  {
     "id": "005",
     "title": "Tablette cacahuètes",
     "description": "xxx",
@@ -86,6 +41,39 @@
     "image": {
       "folder": "chocolat/",
       "file": "stars.png"
+    }
+  },
+  {
+    "id": "009",
+    "title": "Pâte à tartiner caramel beurre salé",
+    "description": "xxx",
+    "grames": "250",
+    "price": 9.25,
+    "image": {
+      "folder": "pate-a-tartiner/",
+      "file": "pat-caramel-beurre-sale.jpg"
+    }
+  },
+  {
+    "id": "010",
+    "title": "Confiture maison",
+    "description": "xxx",
+    "grames": "250",
+    "price": 7.77,
+    "image": {
+      "folder": "pate-a-tartiner/",
+      "file": "pat-confiture.jpg"
+    }
+  },
+  {
+    "id": "011",
+    "title": "Pâte à tartiner chocolat/noisette",
+    "description": "xxx",
+    "grames": "250",
+    "price": 11.50,
+    "image": {
+      "folder": "pate-a-tartiner/",
+      "file": "pat-choco-noisette.jpg"
     }
   }
 ]
