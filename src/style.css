@@ -4,6 +4,7 @@
   --color-primary: #B08630;
   --color-secondary: #FAF7E3;
   --color-tertiary: #D4BF94;
+  --text-primary: rgba(255, 255, 255, 0.87);
 }
 
 :root {
@@ -20,10 +21,10 @@
 }
 
 header {
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--text-primary);
 }
 
 footer {
   background-color: var(--color-primary);
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--text-primary);
 }
