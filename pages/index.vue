@@ -146,19 +146,19 @@
           <div class="brand-story-content">
             <span class="section-label">Notre histoire</span>
             <h2 class="brand-story-title">L'art de la chocolaterie artisanale</h2>
-            <div class="divider" style="margin: 16px 0;" />
+            <div class="divider" />
             <p>
               Fondée au cœur de Paris, notre chocolaterie perpétue une tradition
               d'excellence en sélectionnant les meilleures fèves de cacao à travers
               le monde — Madagascar, Pérou, Sao Tomé — pour créer des chocolats
               d'une finesse et d'une intensité inégalées.
             </p>
-            <p style="margin-top: 16px;">
+            <p>
               Chaque création est le résultat d'un travail minutieux : torrефaction,
               conchage et assemblage réalisés dans notre atelier parisien, pour vous
               offrir une expérience gustative authentique et mémorable.
             </p>
-            <NuxtLink to="/produits" class="btn btn-primary" style="margin-top: 32px; align-self: flex-start;">
+            <NuxtLink to="/produits" class="btn btn-primary brand-story-cta">
               Explorer nos créations
             </NuxtLink>
           </div>
@@ -241,7 +241,7 @@ const newProducts = computed(() =>
 }
 
 .hero-content .section-label {
-  color: rgba(196, 130, 26, 0.9);
+  color: var(--c-gold);
 }
 
 .hero-title {
@@ -359,6 +359,19 @@ const newProducts = computed(() =>
 .brand-story-content {
   display: flex;
   flex-direction: column;
+}
+
+.brand-story-content .divider {
+  margin: var(--space-md) 0;
+}
+
+.brand-story-content p + p {
+  margin-top: var(--space-md);
+}
+
+.brand-story-cta {
+  margin-top: var(--space-xl);
+  align-self: flex-start;
 }
 
 .brand-story-title {
