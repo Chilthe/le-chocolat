@@ -47,7 +47,7 @@ const emit = defineEmits<{ open: [product: Product] }>()
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 2px 2px 5px rgba(61, 28, 10, 0.18);
 }
 
 .product-card:hover .card-overlay {
@@ -173,5 +173,9 @@ const emit = defineEmits<{ open: [product: Product] }>()
   font-size: 0.78rem;
   color: var(--c-text-muted);
   letter-spacing: 0.04em;
+}
+
+@media (hover: none) {
+  .product-card:focus { outline: none; }
 }
 </style>
