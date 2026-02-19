@@ -101,7 +101,6 @@ interface Filters {
   categories: string[]
   priceMin: number
   priceMax: number
-  inStockOnly: boolean
   sortBy: string
 }
 
@@ -109,7 +108,6 @@ const filters = ref<Filters>({
   categories: [],
   priceMin: 0,
   priceMax: 999,
-  inStockOnly: false,
   sortBy: 'featured',
 })
 
@@ -135,11 +133,6 @@ const filteredProducts = computed(() => {
     p.price >= filters.value.priceMin &&
     p.price <= filters.value.priceMax
   )
-
-  // In stock filter
-  if (filters.value.inStockOnly) {
-    result = result.filter(p => p.inStock)
-  }
 
   // Sort
   switch (filters.value.sortBy) {

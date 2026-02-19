@@ -11,7 +11,6 @@ export interface Product {
   image: string
   badge?: string
   featured?: boolean
-  inStock: boolean
 }
 
 export const categories = [
@@ -36,7 +35,7 @@ export const products: Product[] = [
     description: 'Chocolat au lait de Madagascar',
     longDescription: 'Issu des meilleures fèves de cacao de Madagascar, ce chocolat au lait révèle des notes de caramel, de vanille et une légère pointe fruitée. Une expérience gustative douce et complexe, travaillée avec le plus grand soin.',
     image: 'https://picsum.photos/seed/choc-tablette-lait/600/600',
-    inStock: true,
+
   },
   {
     id: 2,
@@ -49,7 +48,7 @@ export const products: Product[] = [
     description: 'Grand cru 72% — Intensité et caractère',
     longDescription: 'Un grand cru du Pérou, ce chocolat noir 72% offre une intensité remarquable avec des arômes de fruits noirs, de cèdre et une finale légèrement acidulée. Pour les amateurs de caractère et de profondeur.',
     image: 'https://picsum.photos/seed/choc-tablette-noir/600/600',
-    inStock: true,
+
   },
   {
     id: 3,
@@ -63,7 +62,7 @@ export const products: Product[] = [
     longDescription: 'Une tablette de chocolat blanc enveloppant une ganache onctueuse à la vanille de Tahiti. La douceur à son summum, équilibrée par la subtilité florale de la vanille grand cru. Une création délicate et raffinée.',
     image: 'https://picsum.photos/seed/choc-tablette-blanc/600/600',
     badge: 'Nouveauté',
-    inStock: true,
+
   },
   {
     id: 4,
@@ -77,7 +76,7 @@ export const products: Product[] = [
     longDescription: 'Une barre de chocolat blanc enrobant un cœur de zestes de citron confit et une ganache citronnée. Le mariage parfait entre la douceur du chocolat blanc et l\'acidité vive du citron de Menton.',
     image: 'https://picsum.photos/seed/choc-barre-citron/600/600',
     featured: true,
-    inStock: true,
+
   },
   {
     id: 5,
@@ -90,7 +89,7 @@ export const products: Product[] = [
     description: 'Chocolat au lait et noix de coco grillée',
     longDescription: 'Un voyage exotique avec cette barre associant chocolat au lait fondant et noix de coco grillée. Une texture croustillante enveloppant un cœur moelleux, pour une saveur tropicale irrésistible.',
     image: 'https://picsum.photos/seed/choc-barre-coco/600/600',
-    inStock: true,
+
   },
   {
     id: 6,
@@ -103,7 +102,7 @@ export const products: Product[] = [
     description: 'Chocolat noir 66% et coulis de framboise',
     longDescription: 'L\'acidité fruitée de la framboise rencontre l\'intensité du chocolat noir 66%. Un coulis coulant au cœur d\'une enveloppe craquante pour une explosion de saveurs aussi belle que délicieuse.',
     image: 'https://picsum.photos/seed/choc-barre-framboise/600/600',
-    inStock: false,
+
   },
   {
     id: 7,
@@ -118,7 +117,7 @@ export const products: Product[] = [
     image: 'https://picsum.photos/seed/choc-bonbons/600/600',
     badge: 'Bestseller',
     featured: true,
-    inStock: true,
+
   },
   {
     id: 8,
@@ -131,7 +130,7 @@ export const products: Product[] = [
     description: 'Disques chocolat noir, fruits secs et noix',
     longDescription: 'De fins disques de chocolat noir 70% garnis à la main de pistaches de Sicile, noisettes du Piémont, amandes de Valence et raisins de Corinthe. Un classique revisité avec des produits d\'exception.',
     image: 'https://picsum.photos/seed/choc-mendiant/600/600',
-    inStock: true,
+
   },
   {
     id: 9,
@@ -144,7 +143,7 @@ export const products: Product[] = [
     description: 'Écorces d\'orange confites, enrobées de noir',
     longDescription: 'Des écorces d\'orange soigneusement confites pendant 72 heures dans un sirop vanillé, puis enrobées d\'un chocolat noir 66% intense. La rencontre entre l\'amertume de l\'écorce et la puissance du cacao.',
     image: 'https://picsum.photos/seed/choc-orangette/600/600',
-    inStock: true,
+
   },
   {
     id: 10,
@@ -157,7 +156,7 @@ export const products: Product[] = [
     description: 'Pâtes de fruits artisanales aux saveurs d\'été',
     longDescription: 'Des pâtes de fruits confectionnées à partir de fruits frais de saison : fraise de Carpentras, abricot du Roussillon, framboise de Corrèze, cassis de Bourgogne et mangue alphonso. Un concentré de saveurs naturelles.',
     image: 'https://picsum.photos/seed/choc-patefruit/600/600',
-    inStock: true,
+
   },
   {
     id: 11,
@@ -171,7 +170,7 @@ export const products: Product[] = [
     longDescription: 'Des guimauves artisanales à la texture aérienne et fondante, délicatement enrobées d\'une fine couche de chocolat noir craquant. Un nuage de légèreté au cœur d\'une coque intense. Irrésistible.',
     image: 'https://picsum.photos/seed/choc-guimauve/600/600',
     badge: 'Coup de cœur',
-    inStock: true,
+
   },
   {
     id: 12,
@@ -184,7 +183,7 @@ export const products: Product[] = [
     description: 'Cake moelleux, noisettes torréfiées et pépites',
     longDescription: 'Un cake généreux aux éclats de noisettes du Piémont torréfiées et pépites de chocolat noir fondantes, à la texture moelleuse et humide. Se conserve une semaine, s\'emporte partout pour un plaisir prolongé.',
     image: 'https://picsum.photos/seed/choc-cake/600/600',
-    inStock: true,
+
   },
   {
     id: 13,
@@ -198,7 +197,7 @@ export const products: Product[] = [
     longDescription: 'Une sélection de 10 biscuits artisanaux au chocolat : sablés Bretagne ganache, financiers praliné, langues de chat noir et tuiles caramel. Chaque biscuit est une invitation à la gourmandise.',
     image: 'https://picsum.photos/seed/choc-biscuits/600/600',
     badge: 'Idée Cadeau',
-    inStock: true,
+
   },
   {
     id: 14,
@@ -213,7 +212,7 @@ export const products: Product[] = [
     image: 'https://picsum.photos/seed/choc-noisette/600/600',
     badge: 'Nouveauté',
     featured: true,
-    inStock: true,
+
   },
   {
     id: 15,
@@ -226,7 +225,7 @@ export const products: Product[] = [
     description: 'Amandes émondées et chocolat blanc crémeux',
     longDescription: 'Une pâte douce et crémeuse à base d\'amandes émondées de Valence et de chocolat blanc de qualité supérieure. Une alternative délicate et parfumée, légèrement vanillée pour les amateurs de saveurs douces.',
     image: 'https://picsum.photos/seed/choc-amande/600/600',
-    inStock: true,
+
   },
   {
     id: 16,
@@ -241,7 +240,7 @@ export const products: Product[] = [
     image: 'https://picsum.photos/seed/choc-coffret-decouverte/600/600',
     badge: 'Idée Cadeau',
     featured: true,
-    inStock: true,
+
   },
   {
     id: 17,
@@ -255,6 +254,6 @@ export const products: Product[] = [
     longDescription: 'Une sélection romantique et généreuse : bonbons en forme de cœur en chocolat noir, tablette Blanc Ganache Vanille, et pralinés délicats. Emballage soigné avec ruban satiné, pour déclarer sa flamme avec élégance.',
     image: 'https://picsum.photos/seed/choc-coffret-saint-valentin/600/600',
     badge: 'Saint-Valentin',
-    inStock: true,
+
   },
 ]

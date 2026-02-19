@@ -1,27 +1,38 @@
 <template>
   <header class="toolbar" :class="{ 'toolbar--scrolled': scrolled }">
-    <div class="toolbar-inner container">
-      <!-- Left nav -->
-      <nav class="toolbar-nav toolbar-nav--left" aria-label="Navigation principale gauche">
-        <NuxtLink
-          v-for="link in navLeft"
-          :key="link.label"
-          :to="link.to"
-          class="nav-link"
-        >
-          {{ link.label }}
-        </NuxtLink>
-      </nav>
+    <div class="toolbar-inner">
 
-      <!-- Center logo -->
+      <!-- Left col: nav or hamburger -->
+      <div class="toolbar-left">
+        <nav class="toolbar-nav" aria-label="Navigation principale gauche">
+          <NuxtLink
+            v-for="link in navLeft"
+            :key="link.label"
+            :to="link.to"
+            class="nav-link"
+          >
+            {{ link.label }}
+          </NuxtLink>
+        </nav>
+        <button
+          class="mobile-toggle"
+          :class="{ 'mobile-toggle--open': mobileOpen }"
+          @click="mobileOpen = !mobileOpen"
+          aria-label="Menu"
+        >
+          <span /><span /><span />
+        </button>
+      </div>
+
+      <!-- Center col: logo -->
       <NuxtLink to="/" class="toolbar-logo">
         <span class="logo-sub">Le</span>
         <span class="logo-main">Chocolat</span>
       </NuxtLink>
 
-      <!-- Right nav + actions -->
+      <!-- Right col: nav + actions -->
       <div class="toolbar-right">
-        <nav class="toolbar-nav toolbar-nav--right" aria-label="Navigation principale droite">
+        <nav class="toolbar-nav" aria-label="Navigation principale droite">
           <NuxtLink
             v-for="link in navRight"
             :key="link.label"
@@ -33,12 +44,9 @@
         </nav>
 
         <div class="toolbar-actions">
-          <!-- Account -->
           <button class="icon-btn" title="Mon compte" aria-label="Mon compte">
             <Icon name="lucide:user" size="20" />
           </button>
-
-          <!-- Cart -->
           <button class="icon-btn cart-btn" title="Panier" aria-label="Panier" @click="cartStore.drawerOpen = true">
             <Icon name="lucide:shopping-bag" size="20" />
             <span v-if="cartStore.totalItems > 0" class="cart-badge">{{ cartStore.totalItems }}</span>
@@ -46,15 +54,6 @@
         </div>
       </div>
 
-      <!-- Mobile menu button -->
-      <button
-        class="mobile-toggle"
-        :class="{ 'mobile-toggle--open': mobileOpen }"
-        @click="mobileOpen = !mobileOpen"
-        aria-label="Menu"
-      >
-        <span /><span /><span />
-      </button>
     </div>
 
     <!-- Mobile menu -->
@@ -115,12 +114,21 @@ onMounted(() => {
   box-shadow: var(--shadow-md);
 }
 
+/* Grid 5-2-5 */
 .toolbar-inner {
   height: 100%;
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+  align-items: stretch;
+}
+
+/* Left col */
+.toolbar-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
+  justify-content: center;
+  padding: 0 var(--space-xl);
+
 }
 
 /* Logo */
@@ -128,9 +136,9 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   line-height: 1;
   text-decoration: none;
-  flex-shrink: 0;
 }
 
 .logo-sub {
@@ -149,7 +157,17 @@ onMounted(() => {
   letter-spacing: 0.06em;
 }
 
-/* Navs */
+/* Right col */
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: 0 var(--space-xl);
+
+}
+
+/* Nav links */
 .toolbar-nav {
   display: flex;
   align-items: center;
@@ -169,13 +187,6 @@ onMounted(() => {
 .nav-link:hover,
 .nav-link.router-link-active {
   color: var(--c-dark);
-}
-
-/* Right section */
-.toolbar-right {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
 }
 
 /* Actions */
@@ -280,11 +291,7 @@ onMounted(() => {
 @media (max-width: 900px) {
   .toolbar-nav { display: none; }
   .mobile-toggle { display: flex; }
-}
-
-@media (max-width: 480px) {
-  .toolbar-right { display: none; }
-  .toolbar-actions { display: flex; }
-  .toolbar-right .toolbar-actions { display: flex; }
+  .toolbar-left { justify-content: flex-start; }
+  .toolbar-right { justify-content: flex-end; }
 }
 </style>

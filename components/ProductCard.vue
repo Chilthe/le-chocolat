@@ -8,8 +8,7 @@
         loading="lazy"
       />
       <span v-if="product.badge" class="card-badge badge badge-gold">{{ product.badge }}</span>
-      <div v-if="!product.inStock" class="card-oos">Rupture de stock</div>
-      <div class="card-overlay">
+<div class="card-overlay">
         <span class="card-cta">Voir le produit</span>
       </div>
     </div>
@@ -78,20 +77,6 @@ const emit = defineEmits<{ open: [product: Product] }>()
   top: 12px;
   left: 12px;
   z-index: 1;
-}
-
-.card-oos {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(250, 247, 242, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-text-muted);
 }
 
 .card-overlay {

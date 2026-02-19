@@ -42,12 +42,6 @@
                   <span class="meta-label">Poids</span>
                   <span class="meta-value">{{ product.weight }}</span>
                 </div>
-                <div class="modal-meta-item">
-                  <span class="meta-label">Disponibilité</span>
-                  <span class="meta-value" :class="product.inStock ? 'in-stock' : 'out-of-stock'">
-                    {{ product.inStock ? 'En stock' : 'Rupture de stock' }}
-                  </span>
-                </div>
               </div>
 
               <div class="modal-purchase">
@@ -57,7 +51,7 @@
                 </div>
 
                 <!-- Quantity selector -->
-                <div v-if="product.inStock" class="quantity-selector">
+                <div class="quantity-selector">
                   <button class="qty-btn" @click="quantity = Math.max(1, quantity - 1)" aria-label="Diminuer">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                       <line x1="5" y1="12" x2="19" y2="12" />
@@ -73,7 +67,6 @@
                 </div>
 
                 <button
-                  v-if="product.inStock"
                   class="btn btn-gold add-to-cart"
                   @click="addToCart"
                 >
@@ -85,13 +78,10 @@
                   Ajouter au panier
                 </button>
 
-                <button v-else class="btn btn-outline" disabled>
-                  Rupture de stock
-                </button>
               </div>
 
               <!-- Total -->
-              <p v-if="product.inStock && quantity > 1" class="modal-total">
+              <p v-if="quantity > 1" class="modal-total">
                 Total : <strong>{{ (product.price * quantity).toFixed(2) }}&nbsp;€</strong>
               </p>
             </div>
@@ -278,9 +268,6 @@ function onKeydown(e: KeyboardEvent) {
   font-weight: 600;
   color: var(--c-dark);
 }
-
-.in-stock { color: #3a7c5e; }
-.out-of-stock { color: #b04040; }
 
 /* Purchase */
 .modal-purchase {

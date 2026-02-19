@@ -62,15 +62,6 @@
       </div>
     </div>
 
-    <!-- In stock only -->
-    <div class="filter-group">
-      <label class="filter-checkbox">
-        <input type="checkbox" v-model="inStockOnly" />
-        <span class="checkbox-box" />
-        <span class="checkbox-label">En stock uniquement</span>
-      </label>
-    </div>
-
     <!-- Sort -->
     <div class="filter-group">
       <h4 class="filter-group-title">Trier par</h4>
@@ -97,7 +88,6 @@ const emit = defineEmits<{
     categories: string[]
     priceMin: number
     priceMax: number
-    inStockOnly: boolean
     sortBy: string
   }]
 }>()
@@ -107,7 +97,6 @@ const maxPrice = Math.max(...products.map(p => p.price))
 const selectedCategories = ref<string[]>([])
 const priceMin = ref(0)
 const priceMax = ref(maxPrice)
-const inStockOnly = ref(false)
 const sortBy = ref('featured')
 
 const sortOptions = [
@@ -121,7 +110,6 @@ const hasActiveFilters = computed(() =>
   selectedCategories.value.length > 0 ||
   priceMin.value > 0 ||
   priceMax.value < maxPrice ||
-  inStockOnly.value ||
   sortBy.value !== 'featured'
 )
 
@@ -137,18 +125,16 @@ function reset() {
   selectedCategories.value = []
   priceMin.value = 0
   priceMax.value = maxPrice
-  inStockOnly.value = false
   sortBy.value = 'featured'
 }
 
 watch(
-  [selectedCategories, priceMin, priceMax, inStockOnly, sortBy],
+  [selectedCategories, priceMin, priceMax, sortBy],
   () => {
     emit('update', {
       categories: selectedCategories.value,
       priceMin: priceMin.value,
       priceMax: priceMax.value,
-      inStockOnly: inStockOnly.value,
       sortBy: sortBy.value,
     })
   },
