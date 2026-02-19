@@ -5,6 +5,7 @@
       <slot />
     </main>
     <AppFooter />
+    <CartDrawer />
     <!-- Cart toast notification -->
     <Teleport to="body">
       <Transition name="toast">

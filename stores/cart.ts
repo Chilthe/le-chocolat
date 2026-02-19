@@ -15,6 +15,7 @@ export const useCartStore = defineStore('cart', {
     items: [] as CartItem[],
     toastVisible: false,
     toastProduct: '' as string,
+    drawerOpen: false,
   }),
 
   getters: {
