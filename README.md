@@ -19,7 +19,6 @@ npm run dev # run the project in local
 
 ## Technologies
 
-- Vue
-- Vite
-- TailwindCSS
-- Storybook
+- [Vue](https://vuejs.org/guide/introduction.html)
+- [Nuxt](https://nuxt.com/docs/4.x/getting-started/introduction)
+- [Pinia](https://pinia.vuejs.org/core-concepts/)
